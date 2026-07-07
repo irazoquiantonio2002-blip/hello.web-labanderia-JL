@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>Lavandería JL | Lavado por Kilo, Planchado y Tintorería a Domicilio</title>
+  <meta name="description" content="Lavandería JL: lavado por kilo, planchado profesional, tintorería y lavado en seco, edredones y blancos, con recolección y entrega a domicilio. Cotiza gratis por WhatsApp." />
+  <meta name="keywords" content="lavandería, lavado por kilo, planchado profesional, tintorería, lavado en seco, lavandería a domicilio, lavado de edredones, servicio de lavandería express, lavandería cerca de mí" />
+  <meta property="og:title" content="Lavandería JL | Lavado, Planchado y Tintorería a Domicilio" />
+  <meta property="og:description" content="Lavado por kilo, planchado profesional, tintorería y entrega a domicilio. Cotiza gratis por WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+
+  <!--
+    ⚠️ DATOS DE MARCADOR DE POSICIÓN (placeholder) — reemplazar antes de publicar:
+    - Número de WhatsApp / teléfono: buscar "520000000000" y "+52 55 0000 0000"
+    - Correo: buscar "[tu-correo@lavanderiajl.com]"
+    - Dirección: buscar "[Dirección de tu lavandería]"
+    - Horario: buscar "Lun – Sáb: 8:00 AM – 7:00 PM" (ajustar si es distinto)
+  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  PRELOADER PREMIUM                                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div id="preloader" class="preloader">
+  <div class="preloader-bg"></div>
+  <div class="preloader-particles" id="preloaderParticles"></div>
+  <div class="preloader-content">
+    <div class="preloader-logo-wrap">
+      <div class="preloader-rings">
+        <div class="p-ring p-ring-1"></div>
+        <div class="p-ring p-ring-2"></div>
+        <div class="p-ring p-ring-3"></div>
+      </div>
+      <div class="preloader-logo-circle">
+        <img src="imagenes/icono.svg" alt="Lavandería JL" class="preloader-logo-img" />
+      </div>
+    </div>
+    <div class="preloader-brand-name">
+      <span class="p-name" id="pName">LAVANDERÍA</span>
+      <span class="p-mg" id="pMg">JL</span>
+    </div>
+    <p class="preloader-tagline-text">Lavado &amp; Planchado Profesional a Domicilio</p>
+    <div class="preloader-progress-wrap">
+      <div class="preloader-progress-bar" id="progressBar"></div>
+    </div>
+    <div class="preloader-percent" id="progressPercent">0%</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  HEADER / NAVBAR                                            -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<header id="navbar" class="navbar">
+  <div class="navbar-inner">
+    <a href="#inicio" class="nav-logo" aria-label="Lavandería JL">
+      <img src="imagenes/icono.svg" alt="Icono Lavandería JL" class="nav-logo-img" />
+      <div class="nav-logo-text">
+        <span class="nav-brand-name">Lavandería</span>
+        <span class="nav-brand-mg">JL</span>
+      </div>
+    </a>
+    <nav class="nav-links" aria-label="Menú principal">
+      <a href="#inicio"      class="nav-link">Inicio</a>
+      <a href="#servicios"   class="nav-link">Servicios</a>
+      <a href="#beneficios"  class="nav-link">Beneficios</a>
+      <a href="#proceso"     class="nav-link">Proceso</a>
+      <a href="#contacto"    class="nav-link">Contacto</a>
+    </nav>
+    <a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20lavander%C3%ADa"
+       class="nav-cta" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      Solicitar Cotización
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav">
+      <a href="#inicio"     class="mobile-link">Inicio</a>
+      <a href="#servicios"  class="mobile-link">Servicios</a>
+      <a href="#beneficios" class="mobile-link">Beneficios</a>
+      <a href="#proceso"    class="mobile-link">Proceso</a>
+      <a href="#contacto"   class="mobile-link">Contacto</a>
+    </nav>
+    <a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20lavander%C3%ADa"
+       class="mobile-cta" target="_blank" rel="noopener">Solicitar Cotización por WhatsApp</a>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  HERO                                                       -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="inicio" class="hero">
+
+  <div class="hero-bg">
+    <div class="hero-bg-photo">
+      <img
+        src="https://images.unsplash.com/photo-1757233297886-f07bd0f626b5?auto=format&fit=crop&w=1920&q=85"
+        alt="Lavandería profesional con máquinas industriales"
+        aria-hidden="true"
+        loading="eager"
+        onerror="this.src='https://images.unsplash.com/photo-1675430409777-eaa846201440?auto=format&fit=crop&w=1920&q=85'"
+      />
+    </div>
+    <div class="hero-gradient-overlay"></div>
+    <div class="hero-grid-overlay"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+    <div class="hero-speed-lines"></div>
+  </div>
+
+  <div class="hero-bubbles" id="heroBubbles" aria-hidden="true"></div>
+  <canvas id="heroCanvas" class="hero-canvas"></canvas>
+
+  <div class="hero-container">
+
+    <div class="hero-copy" id="heroCopy">
+
+      <div class="hero-badge" id="heroBadge">
+        <span class="badge-live"></span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#7dd3fc"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Lavado, Planchado y Tintorería — <strong>Entrega a Domicilio</strong>
+      </div>
+
+      <h1 class="hero-title" id="heroTitle">
+        <span class="ht-top">Tu Ropa, Impecable</span>
+        <span class="ht-main">Sin que Muevas<br/>un Dedo 🧺</span>
+        <span class="ht-accent">Recolección y Entrega a Domicilio</span>
+      </h1>
+
+      <p class="hero-subtitle" id="heroSubtitle">
+        Lavado por kilo, planchado profesional y tintorería con recolección y entrega
+        en la puerta de tu casa. Cuidamos cada prenda como si fuera nuestra.
+      </p>
+
+      <div class="hero-ctas" id="heroCtas">
+        <a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20lavander%C3%ADa"
+           class="btn-primary-hero" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+        <a href="tel:+520000000000" class="btn-secondary-hero">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar Ahora
+        </a>
+      </div>
+
+      <div class="hero-trust" id="heroTrust">
+        <div class="trust-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
+          Recolección a domicilio
+        </div>
+        <div class="trust-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
+          Lavado por kilo
+        </div>
+        <div class="trust-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
+          Planchado profesional
+        </div>
+        <div class="trust-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
+          Entrega en 24–48h
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" id="heroVisual">
+
+      <div class="hero-img-frame" id="heroMainCard">
+        <div class="hero-img-inner">
+          <img
+            src="https://images.unsplash.com/photo-1647202152259-98fe50ad0618?auto=format&fit=crop&w=900&q=85"
+            alt="Planchado profesional de camisas en Lavandería JL"
+            loading="eager"
+            onerror="this.src='https://images.unsplash.com/photo-1542663210-8581a465ddd1?auto=format&fit=crop&w=900&q=85'"
+          />
+          <div class="hero-img-overlay"></div>
+        </div>
+        <div class="hero-img-badge">
+          <div class="hib-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#4ade80"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10" stroke="white" stroke-width="2" fill="none"/></svg>
+          </div>
+          <div>
+            <div class="hib-title">Cuidado experto</div>
+            <div class="hib-sub">● Tu ropa en buenas manos</div>
+          </div>
+        </div>
+        <div class="img-bubble ib1"></div>
+        <div class="img-bubble ib2"></div>
+        <div class="img-bubble ib3"></div>
+      </div>
+
+      <div class="float-card fc-price" id="fcPrice">
+        <div class="fc-icon fc-icon-blue">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1560bd" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div class="fc-body">
+          <span class="fc-label">Cotización</span>
+          <span class="fc-value" style="color: var(--royal);">Gratis <small>siempre</small></span>
+          <span class="fc-note">Sin compromiso</span>
+        </div>
+      </div>
+
+      <div class="float-card fc-speed" id="fcSpeed">
+        <div class="fc-icon fc-icon-cyan">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="fc-body">
+          <span class="fc-label">Entrega rápida</span>
+          <span class="fc-value-big">24–48 horas</span>
+          <span class="fc-note">listo para recoger</span>
+        </div>
+      </div>
+
+      <div class="float-card fc-rating" id="fcRating">
+        <div class="fc-stars">★★★★★</div>
+        <div class="fc-rating-text">Clientes satisfechos</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue" id="heroScrollCue">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Desliza</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  ESPECIALIDADES BAR                                         -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="brands-bar reveal-up">
+  <div class="brands-inner">
+    <span class="brands-label">Especializados en:</span>
+    <div class="brands-chips">
+      <span class="brand-chip chip-blue">🧺 Lavado por Kilo</span>
+      <span class="brand-sep">·</span>
+      <span class="brand-chip chip-cyan">🎽 Tintorería</span>
+      <span class="brand-sep">·</span>
+      <span class="brand-chip chip-green">👔 Planchado</span>
+      <span class="brand-sep">·</span>
+      <span class="brand-chip chip-yellow">🚚 Entrega a Domicilio</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SERVICIOS                                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="servicios" class="section-dark">
+  <div class="sec-container">
+    <div class="sec-header reveal-up">
+      <div class="sec-badge">Nuestros Servicios</div>
+      <h2 class="sec-title">Todo lo que tu Ropa<br/><em class="em-electric">Necesita en un Solo Lugar</em></h2>
+      <p class="sec-subtitle">Lavado, planchado y tintorería con atención personalizada, productos de calidad y entrega a domicilio.</p>
+    </div>
+    <div class="services-grid services-grid-3">
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.unsplash.com/photo-1675430409777-eaa846201440?auto=format&fit=crop&w=700&q=80"
+               alt="Máquinas de lavado industrial para lavado por kilo"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+          <span class="sc-img-tag">Más solicitado</span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-blue">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1560bd" stroke-width="1.8"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/><circle cx="7" cy="5.5" r="0.8" fill="#1560bd" stroke="none"/><circle cx="10" cy="5.5" r="0.8" fill="#1560bd" stroke="none"/></svg>
+          </div>
+          <h3>Lavado por Kilo</h3>
+          <p>Lavado y secado profesional por kilo para tu ropa de uso diario. Ideal para familias, roperos completos o grandes volúmenes.</p>
+          <ul class="sc-list">
+            <li>Separación por color y tipo de tela</li>
+            <li>Detergentes hipoalergénicos</li>
+            <li>Secado a temperatura controlada</li>
+            <li>Doblado y empaquetado prolijo</li>
+          </ul>
+          <a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20lavado%20por%20kilo" class="sc-cta" target="_blank" rel="noopener">Cotizar servicio →</a>
+        </div>
+      </article>
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.unsplash.com/photo-1542663210-8581a465ddd1?auto=format&fit=crop&w=700&q=80"
+               alt="Planchado profesional de camisas a vapor"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-green">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.8"><path d="M20 12.5c0 3-2.5 5.5-6 5.5H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h1.5L9 7a4 4 0 0 1 4-3h3a2 2 0 0 1 2 2v2.5"/><circle cx="16" cy="9" r="1"/><line x1="4" y1="19" x2="16" y2="19"/></svg>
+          </div>
+          <h3>Planchado Profesional</h3>
+          <p>Planchado a vapor con acabado de tintorería para que tu ropa luzca impecable, lista para usar o guardar.</p>
+          <ul class="sc-list">
+            <li>Camisas, pantalones y uniformes</li>
+            <li>Acabado en percha o doblado</li>
+            <li>Vapor profesional sin dañar la tela</li>
+            <li>Entrega el mismo día disponible</li>
+          </ul>
+          <a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20planchado%20profesional" class="sc-cta" target="_blank" rel="noopener">Cotizar servicio →</a>
+        </div>
+      </article>
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80"
+               alt="Prenda delicada lista de tintorería en percha"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-cyan">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="1.8"><path d="M12 3a2 2 0 1 1 2 2c-.6.5-1 .9-1 1.5"/><path d="M12 6.5c0 .8.6 1.3 1.3 1.7l7.4 4.2c1 .6 1 2.1-.2 2.5L12 17 3.5 15c-1.2-.4-1.2-1.9-.2-2.5l7.4-4.2c.7-.4 1.3-.9 1.3-1.7"/></svg>
+          </div>
+          <h3>Tintorería y Lavado en Seco</h3>
+          <p>Lavado en seco especializado para prendas delicadas, trajes, vestidos y textiles que no puedes lavar en casa.</p>
+          <ul class="sc-list">
+            <li>Trajes, vestidos y prendas de gala</li>
+            <li>Seda, lana y textiles delicados</li>
+            <li>Remoción experta de manchas</li>
+            <li>Empaque protector incluido</li>
+          </ul>
+          <a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20tintorer%C3%ADa" class="sc-cta" target="_blank" rel="noopener">Cotizar servicio →</a>
+        </div>
+      </article>
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.unsplash.com/photo-1741176504815-75b0b79dc3c6?auto=format&fit=crop&w=700&q=80"
+               alt="Personal doblando y apilando toallas limpias"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-purple">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Edredones, Cobijas y Blancos</h3>
+          <p>Lavado profesional de edredones, cobijas, sábanas y blancos grandes que no caben en tu lavadora de casa.</p>
+          <ul class="sc-list">
+            <li>Edredones y cobertores de todos los tamaños</li>
+            <li>Sábanas, toallas y manteles</li>
+            <li>Máquinas de alta capacidad</li>
+            <li>Secado higiénico completo</li>
+          </ul>
+          <a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20lavado%20de%20edredones" class="sc-cta" target="_blank" rel="noopener">Cotizar servicio →</a>
+        </div>
+      </article>
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.unsplash.com/photo-1696546761269-a8f9d2b80512?auto=format&fit=crop&w=700&q=80"
+               alt="Canasta de ropa limpia lista para entrega a domicilio"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-yellow">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.8"><rect x="1" y="7" width="13" height="9" rx="1"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+          </div>
+          <h3>Entrega a Domicilio</h3>
+          <p>Recogemos tu ropa en la puerta de tu casa y te la entregamos limpia, doblada y lista, sin que tengas que salir.</p>
+          <ul class="sc-list">
+            <li>Recolección en el horario que elijas</li>
+            <li>Empaque higiénico por cliente</li>
+            <li>Seguimiento de tu pedido</li>
+            <li>Entrega puntual garantizada</li>
+          </ul>
+          <a href="https://wa.me/520000000000?text=Hola,%20quiero%20agendar%20recolecci%C3%B3n%20a%20domicilio" class="sc-cta" target="_blank" rel="noopener">Cotizar servicio →</a>
+        </div>
+      </article>
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.unsplash.com/photo-1724847885015-be191f1a47ef?auto=format&fit=crop&w=700&q=80"
+               alt="Pila de toallas dobladas lista para servicio express"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-blue">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1560bd" stroke-width="1.8"><polygon points="13 2 3 14 11 14 9 22 21 10 13 10 13 2"/></svg>
+          </div>
+          <h3>Servicio Express</h3>
+          <p>¿Lo necesitas para hoy? Nuestro servicio express lava, seca y entrega tu ropa el mismo día.</p>
+          <ul class="sc-list">
+            <li>Ideal para viajes o emergencias</li>
+            <li>Prioridad en lavado y planchado</li>
+            <li>Disponible bajo pedido</li>
+            <li>Confirma disponibilidad por WhatsApp</li>
+          </ul>
+          <a href="https://wa.me/520000000000?text=Hola,%20necesito%20servicio%20express%20de%20lavander%C3%ADa" class="sc-cta" target="_blank" rel="noopener">Cotizar servicio →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SOLUCIONES PARA TU ROPA                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="section-solutions reveal-up">
+  <div class="sec-container">
+    <div class="sec-header reveal-up">
+      <div class="sec-badge">Problemas Comunes</div>
+      <h2 class="sec-title">Soluciones Prácticas<br/><em class="em-electric">para tu Ropa</em></h2>
+      <p class="sec-subtitle">Atendemos las necesidades más frecuentes de lavado, planchado y cuidado de prendas.</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">🧴</div>
+        <h4>Manchas difíciles</h4>
+        <p>Grasa, vino, maquillaje o tinta: tratamos cada mancha con el producto adecuado antes de lavar.</p>
+      </div>
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">🎽</div>
+        <h4>Prendas delicadas</h4>
+        <p>Seda, lana o textiles finos que temes dañar en casa, nosotros los cuidamos con lavado en seco.</p>
+      </div>
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">🛏️</div>
+        <h4>Edredones que no caben</h4>
+        <p>Cobertores y cobijas grandes que tu lavadora no soporta, nuestras máquinas sí.</p>
+      </div>
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">⏰</div>
+        <h4>Falta de tiempo</h4>
+        <p>Entre trabajo y familia no te alcanza el día para lavar y planchar: nosotros lo hacemos por ti.</p>
+      </div>
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">👔</div>
+        <h4>Uniformes impecables</h4>
+        <p>Ropa de trabajo siempre lista, limpia y bien planchada para tu próximo turno.</p>
+      </div>
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">📦</div>
+        <h4>Grandes volúmenes</h4>
+        <p>Mudanzas, eventos o ropa de temporada: lavamos por kilo sin importar la cantidad.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  BENEFICIOS                                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="beneficios" class="section-benefits">
+  <div class="benefits-glow-left"></div>
+  <div class="benefits-glow-right"></div>
+  <div class="sec-container">
+    <div class="sec-header reveal-up">
+      <div class="sec-badge">Por Qué Elegirnos</div>
+      <h2 class="sec-title">Lavandería de Confianza<br/><em class="em-electric">para tu Familia</em></h2>
+      <p class="sec-subtitle">Atención directa, cuidado experto y prendas que salen impecables, siempre a tiempo.</p>
+    </div>
+    <div class="benefits-grid">
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-blue">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1560bd" stroke-width="2"><rect x="1" y="7" width="13" height="9" rx="1"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>
+        </div>
+        <h4>Recolección y Entrega a Domicilio</h4>
+        <p>Pasamos por tu ropa y te la regresamos limpia, sin que tengas que moverte de casa.</p>
+      </div>
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-blue">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1560bd" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>Atención Rápida</h4>
+        <p>Escríbenos por WhatsApp y te respondemos al instante para cotizar tu servicio.</p>
+      </div>
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-green">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h4>Cuidado Experto</h4>
+        <p>Detergentes de calidad y procesos cuidadosos para que tu ropa dure más y luzca mejor.</p>
+      </div>
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-cyan">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="M20 12.5c0 3-2.5 5.5-6 5.5H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h1.5L9 7a4 4 0 0 1 4-3h3a2 2 0 0 1 2 2v2.5"/><circle cx="16" cy="9" r="1"/><line x1="4" y1="19" x2="16" y2="19"/></svg>
+        </div>
+        <h4>Planchado Profesional</h4>
+        <p>Acabado de tintorería en cada prenda: camisas, uniformes y vestidos listos para usar.</p>
+      </div>
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-yellow">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        </div>
+        <h4>Contacto por WhatsApp</h4>
+        <p>Cotiza, agenda y da seguimiento a tu pedido directamente por WhatsApp.</p>
+      </div>
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-purple">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h4>Servicio Confiable</h4>
+        <p>Miles de prendas entregadas a tiempo, con la confianza de nuestros clientes.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  PROMO — COTIZACIÓN GRATIS                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="section-promo reveal-up">
+  <div class="sec-container">
+    <div class="promo-inner">
+      <div class="promo-left">
+        <div class="promo-eyebrow">🧺 Servicio a Domicilio</div>
+        <h2 class="promo-title">Agenda tu Recolección<br/><span class="promo-price-text">Rápido por WhatsApp</span></h2>
+        <p class="promo-body">Cuéntanos qué necesitas lavar, planchar o llevar a tintorería y te damos una cotización <strong>rápida, honesta y sin compromiso.</strong><br/>Tu ropa merece un cuidado profesional.</p>
+        <div class="promo-checks">
+          <span class="pc-item"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg> Cotización sin costo</span>
+          <span class="pc-item"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg> Recolección a domicilio</span>
+          <span class="pc-item"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg> Precio claro y justo</span>
+        </div>
+      </div>
+      <div class="promo-right">
+        <div class="promo-card">
+          <div class="promo-card-header">Cotízanos ahora mismo</div>
+          <div class="promo-card-icon">🧺</div>
+          <div class="promo-card-tagline">Cotización</div>
+          <div class="promo-card-pill">✅ Completamente GRATIS</div>
+          <a href="https://wa.me/520000000000?text=Hola,%20quiero%20agendar%20una%20recolecci%C3%B3n%20de%20ropa"
+             class="btn-primary-hero promo-btn" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+          <div class="promo-card-eta">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Respondemos de inmediato
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  PROCESO                                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="proceso" class="section-dark">
+  <div class="sec-container">
+    <div class="sec-header reveal-up">
+      <div class="sec-badge">Cómo Funciona</div>
+      <h2 class="sec-title">Tu Ropa Lista<br/><em class="em-electric">en 4 Pasos Simples</em></h2>
+      <p class="sec-subtitle">Proceso claro, rápido y sin complicaciones. Así trabajamos en cada servicio.</p>
+    </div>
+    <div class="process-wrap process-wrap-4">
+      <div class="process-step stagger-card">
+        <div class="ps-number">01</div>
+        <div class="ps-connector"></div>
+        <div class="ps-content">
+          <div class="ps-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1560bd" stroke-width="2"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></div>
+          <h4>Contáctanos</h4>
+          <p>Escríbenos por WhatsApp o llámanos contándonos qué prendas necesitas lavar, planchar o llevar a tintorería.</p>
+        </div>
+      </div>
+      <div class="process-step stagger-card">
+        <div class="ps-number">02</div>
+        <div class="ps-connector"></div>
+        <div class="ps-content">
+          <div class="ps-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <h4>Cotización al Instante</h4>
+          <p>Te damos un precio claro según el servicio y la cantidad de ropa, sin sorpresas.</p>
+        </div>
+      </div>
+      <div class="process-step stagger-card">
+        <div class="ps-number">03</div>
+        <div class="ps-connector"></div>
+        <div class="ps-content">
+          <div class="ps-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="1" y="7" width="13" height="9" rx="1"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="6" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg></div>
+          <h4>Recolección a Domicilio</h4>
+          <p>Pasamos por tu ropa en el horario que mejor te acomode, sin que tengas que salir de casa.</p>
+        </div>
+      </div>
+      <div class="process-step stagger-card">
+        <div class="ps-number">04</div>
+        <div class="ps-content">
+          <div class="ps-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <h4>Lavado y Entrega</h4>
+          <p>Lavamos, planchamos y te entregamos tu ropa limpia, doblada y lista para usar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  COMPROMISOS Y HORARIOS                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="section-logistics">
+  <div class="sec-container">
+    <div class="logistics-wrap reveal-up">
+      <div class="logistics-left">
+        <div class="sec-badge">Compromisos de Servicio</div>
+        <h2 class="sec-title" style="text-align:left;">Por Qué Confiar<br/>tu Ropa a <em class="em-electric">Lavandería JL</em></h2>
+        <p class="logistics-desc">Cada prenda se trata con el mismo cuidado, sea cual sea el servicio que necesites.</p>
+        <div class="zones-grid">
+          <div class="zone-pill"><span class="z-dot"></span>Lavado por Kilo</div>
+          <div class="zone-pill"><span class="z-dot"></span>Planchado Profesional</div>
+          <div class="zone-pill"><span class="z-dot"></span>Tintorería Especializada</div>
+          <div class="zone-pill"><span class="z-dot"></span>Edredones y Blancos</div>
+          <div class="zone-pill"><span class="z-dot"></span>Recolección a Domicilio</div>
+          <div class="zone-pill"><span class="z-dot"></span>Servicio Express</div>
+          <div class="zone-pill"><span class="z-dot"></span>Entrega en 24–48h</div>
+          <div class="zone-pill"><span class="z-dot"></span>Empaque higiénico</div>
+        </div>
+      </div>
+      <div class="logistics-right">
+        <div class="logistics-card">
+          <div class="lc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1560bd" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div><h5>Horario de Atención</h5><p>Lun – Sáb: 8:00 AM – 7:00 PM<br/>Agenda tu recolección por WhatsApp</p></div>
+        </div>
+        <div class="logistics-card">
+          <div class="lc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><h5>Respuesta Rápida</h5><p>Cotizamos tu servicio al instante y agendamos la recolección en el horario que prefieras.</p></div>
+        </div>
+        <div class="logistics-card">
+          <div class="lc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><rect x="3" y="2" width="18" height="20" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/></svg></div>
+          <div><h5>Lavado y Tintorería</h5><p>Especialistas en lavado por kilo, planchado profesional y tintorería para todo tipo de prendas.</p></div>
+        </div>
+        <div class="logistics-card">
+          <div class="lc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></div>
+          <div><h5>Contacto Directo</h5><p>WhatsApp y llamadas al <strong>[Tu número de WhatsApp]</strong>. Correo: [tu-correo@lavanderiajl.com]</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  AUTHORITY / STATS                                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="section-authority">
+  <div class="authority-bg-photo">
+    <img
+      src="https://images.unsplash.com/photo-1757233297886-f07bd0f626b5?auto=format&fit=crop&w=1920&q=80"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      onerror="this.src='https://images.unsplash.com/photo-1675430409777-eaa846201440?auto=format&fit=crop&w=1920&q=80'"
+    />
+  </div>
+  <div class="authority-bg-glow"></div>
+  <div class="sec-container">
+    <div class="authority-inner reveal-up">
+      <div class="authority-lightning">🧺</div>
+      <h2 class="authority-title">Lavandería de Confianza<br/><span class="em-yellow">para tu Ropa y tu Familia</span></h2>
+      <p class="authority-desc">Lavado por kilo, planchado profesional, tintorería y entrega a domicilio. Atención directa, precios claros y prendas cuidadas como si fueran nuestras.</p>
+      <div class="stats-row">
+        <div class="stat-box"><span class="stat-num" data-target="100" data-suffix="%">100%</span><span class="stat-lbl">Recolección a domicilio</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-box"><span class="stat-num" data-target="24" data-suffix="h">24h</span><span class="stat-lbl">Entrega express</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-box"><span class="stat-num" data-target="6" data-suffix=" servicios">6 servicios</span><span class="stat-lbl">Especializados</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-box"><span class="stat-num" data-target="0" data-prefix="" data-suffix="$ cotización">Cotización</span><span class="stat-lbl">Sin costo</span></div>
+      </div>
+      <a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20lavander%C3%ADa"
+         class="btn-primary-hero authority-btn" target="_blank" rel="noopener">
+        Contactar Ahora por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  CONTACTO                                                   -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="contacto" class="section-contact">
+  <div class="sec-container">
+    <div class="sec-header reveal-up">
+      <div class="sec-badge">Contáctanos</div>
+      <h2 class="sec-title">¿Necesitas Servicio<br/><em class="em-electric">de Lavandería?</em></h2>
+      <p class="sec-subtitle">Escríbenos o llámanos y coordinamos la recolección de tu ropa donde te encuentres.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-up">
+        <div class="contact-wa-card">
+          <div class="cwa-icon">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="#16a34a"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.5c-1.94 0-3.757-.52-5.317-1.427l-.381-.226-3.96 1.039 1.057-3.855-.247-.397A9.448 9.448 0 0 1 2.5 12c0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5z"/></svg>
+          </div>
+          <div class="cwa-text">
+            <span class="cwa-label">WhatsApp Directo</span>
+            <a href="https://wa.me/520000000000" class="cwa-number" target="_blank" rel="noopener">[Tu número de WhatsApp]</a>
+          </div>
+        </div>
+        <div class="contact-details">
+          <div class="cd-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1560bd" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>[Tu número de teléfono]</span></div>
+          <div class="cd-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>[tu-correo@lavanderiajl.com]</span></div>
+          <div class="cd-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>[Dirección de tu lavandería]</span></div>
+          <div class="cd-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>Lun–Sáb: 8:00 AM – 7:00 PM</span></div>
+        </div>
+        <a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20lavander%C3%ADa"
+           class="btn-primary-hero contact-wa-btn" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          Enviar Mensaje por WhatsApp
+        </a>
+        <a href="tel:+520000000000" class="btn-call-contact" style="margin-top:10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar Ahora
+        </a>
+      </div>
+      <div class="contact-form-wrap reveal-up">
+        <form class="contact-form" id="contactForm">
+          <h3 class="form-title">Solicita tu Cotización</h3>
+          <div class="form-row-2">
+            <div class="form-group"><label for="f-nombre">Nombre completo *</label><input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" required /></div>
+            <div class="form-group"><label for="f-tel">Teléfono / WhatsApp *</label><input type="tel" id="f-tel" name="telefono" placeholder="Tu número" required /></div>
+          </div>
+          <div class="form-group">
+            <label for="f-equipo">Tipo de servicio *</label>
+            <select id="f-equipo" name="equipo" required>
+              <option value="">Selecciona el servicio</option>
+              <option value="lavado-kilo">Lavado por kilo</option>
+              <option value="planchado">Planchado profesional</option>
+              <option value="tintoreria">Tintorería / lavado en seco</option>
+              <option value="edredones-blancos">Edredones y blancos</option>
+              <option value="entrega-domicilio">Recolección y entrega a domicilio</option>
+              <option value="servicio-express">Servicio express</option>
+              <option value="otro">Otro servicio</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="f-colonia">Dirección de recolección *</label><input type="text" id="f-colonia" name="colonia" placeholder="Calle, colonia y referencias" required /></div>
+          <div class="form-group"><label for="f-msg">Cuéntanos qué necesitas lavar</label><textarea id="f-msg" name="mensaje" rows="3" placeholder="Ej. 5 kg de ropa, 2 edredones, 3 camisas para planchar..."></textarea></div>
+          <button type="submit" class="btn-primary-hero form-btn">Solicitar Cotización por WhatsApp</button>
+          <p class="form-privacy">Tu información es confidencial y solo se usa para contactarte.</p>
+        </form>
+      </div>
+    </div>
+    <div class="map-wrap reveal-up">
+      <div class="map-header">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>[Dirección de tu lavandería]</span>
+      </div>
+      <div class="map-placeholder" style="width:100%; height:340px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg, var(--blue-50), var(--gray-50)); color:var(--text-muted); text-align:center; padding:20px;">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span style="font-size:13px; max-width:320px;">Aquí se mostrará el mapa de tu ubicación. Agrega la dirección real de Lavandería JL para activarlo.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  CTA FINAL                                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="section-cta-final reveal-up">
+  <div class="sec-container">
+    <div class="cta-final-inner">
+      <h2 class="cta-final-title">¿Necesitas lavar, planchar<br/>o llevar algo a la tintorería?</h2>
+      <p class="cta-final-subtitle">Contáctanos y agenda la recolección de tu ropa. Te ayudamos con lavado por kilo, planchado profesional y tintorería especializada.</p>
+      <div class="cta-final-buttons">
+        <a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20lavander%C3%ADa"
+           class="cta-btn-wa" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          Enviar WhatsApp
+        </a>
+        <a href="tel:+520000000000" class="cta-btn-call">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar Ahora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  FOOTER                                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-top-line"></div>
+  <div class="sec-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="imagenes/icono.svg" alt="Icono Lavandería JL" class="footer-logo-img" />
+          <div class="nav-logo-text">
+            <span class="nav-brand-name" style="color:rgba(255,255,255,0.45);">Lavandería</span>
+            <span class="nav-brand-mg" style="color:white;">JL</span>
+          </div>
+        </div>
+        <p class="footer-desc">Lavado por kilo, planchado profesional, tintorería y entrega a domicilio. Cuidamos tu ropa como si fuera nuestra.</p>
+        <div class="footer-brands-pill"><span>🧺 Lavado</span><span class="fp-sep">·</span><span>👔 Planchado</span><span class="fp-sep">·</span><span>🎽 Tintorería</span></div>
+      </div>
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#servicios">Lavado por Kilo</a></li>
+          <li><a href="#servicios">Planchado Profesional</a></li>
+          <li><a href="#servicios">Tintorería y Lavado en Seco</a></li>
+          <li><a href="#servicios">Edredones y Blancos</a></li>
+          <li><a href="#servicios">Entrega a Domicilio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <div class="footer-contact-items">
+          <div class="fci"><svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg><a href="https://wa.me/520000000000" target="_blank" rel="noopener">[Tu número]</a></div>
+          <div class="fci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>[tu-correo@lavanderiajl.com]</span></div>
+          <div class="fci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4a9fff" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><span>[Dirección de tu lavandería]</span></div>
+          <div class="fci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>Lun–Sáb: 8:00 AM – 7:00 PM</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Lavandería JL. Todos los derechos reservados.</p>
+      <p class="footer-tagline">🧺 Lavado, Planchado y Tintorería Profesional</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/520000000000?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20lavander%C3%ADa"
+   class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <div class="wa-pulse-ring"></div>
+  <div class="wa-pulse-ring wa-pulse-ring-2"></div>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.5c-1.94 0-3.757-.52-5.317-1.427l-.381-.226-3.96 1.039 1.057-3.855-.247-.397A9.448 9.448 0 0 1 2.5 12c0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5z"/></svg>
+  <span class="wa-tooltip">¡Cotiza tu lavado!</span>
+</a>
+
+<!-- Botón de llamada flotante (móvil) -->
+<a href="tel:+520000000000" class="call-float" id="callFloat" aria-label="Llamar ahora">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>

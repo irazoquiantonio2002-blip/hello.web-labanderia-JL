@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#0c1f3f"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="drumGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="rgba(12,31,63,0.35)"/>
+    </filter>
+  </defs>
+
+  <!-- Fondo redondeado -->
+  <rect x="4" y="4" width="112" height="112" rx="26" ry="26" fill="url(#bgGrad)" filter="url(#softShadow)"/>
+
+  <!-- Brillo superior sutil -->
+  <ellipse cx="60" cy="28" rx="38" ry="16" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- ══ TAMBOR / OJO DE LAVADORA ══ -->
+  <circle cx="60" cy="58" r="30" fill="none" stroke="url(#drumGrad)" stroke-width="5.5"/>
+  <circle cx="60" cy="58" r="30" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Onda de agua dentro del tambor -->
+  <path d="M 34 58 Q 44 48, 54 58 T 74 58 T 86 58" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
+  <path d="M 34 68 Q 44 60, 54 68 T 74 68 T 86 68" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+
+  <!-- Burbujas de jabón -->
+  <circle cx="80" cy="30" r="6"   fill="rgba(255,255,255,0.85)"/>
+  <circle cx="80" cy="30" r="6"   fill="none" stroke="white" stroke-width="1"/>
+  <circle cx="90" cy="42" r="3.5" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="32" cy="26" r="4.5" fill="rgba(255,255,255,0.55)"/>
+  <circle cx="26" cy="38" r="2.5" fill="rgba(255,255,255,0.45)"/>
+
+  <!-- Perilla superior (control de la lavadora) -->
+  <circle cx="60" cy="22" r="4" fill="#F59E0B"/>
+
+  <!-- Destellos blancos decorativos -->
+  <circle cx="94" cy="70" r="1.8" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="30" cy="86" r="1.5" fill="rgba(255,255,255,0.35)"/>
+</svg>
