@@ -570,7 +570,7 @@ function initContactForm() {
       (mensaje ? `💬 Detalles: ${mensaje}` : '')
     );
 
-    window.open(`https://wa.me/520000000000?text=${text}`, '_blank');
+    window.open(`https://wa.me/5214421444887?text=${text}`, '_blank');
 
     const btn = form.querySelector('.form-btn');
     if (btn) {
